@@ -1,0 +1,23 @@
+{
+  "name": "youtube",
+  "version": "1.0.0",
+  "description": "Youtube project in React JS",
+  "keywords": [
+    "Youtube"
+  ],
+  "homepage": "https://github.com/02abhishekchoudhary/Youtube-React#readme",
+  "bugs": {
+    "url": "https://github.com/02abhishekchoudhary/Youtube-React/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/02abhishekchoudhary/Youtube-React.git"
+  },
+  "license": "ISC",
+  "author": "Abhishek Choudhary",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  }
+}
