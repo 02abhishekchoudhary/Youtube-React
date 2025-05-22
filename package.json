@@ -19,5 +19,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest"
+  },
+  "devDependencies": {
+    "parcel": "^2.15.1"
   }
 }
