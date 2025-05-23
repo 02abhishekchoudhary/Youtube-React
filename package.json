@@ -21,6 +21,8 @@
     "test": "jest"
   },
   "devDependencies": {
-    "parcel": "^2.15.1"
+    "parcel": "^2.15.1",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17"
   }
 }
