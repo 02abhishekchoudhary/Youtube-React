@@ -16,9 +16,8 @@
   "license": "ISC",
   "author": "Abhishek Choudhary",
   "type": "commonjs",
-  "main": "index.js",
   "scripts": {
-    "start": "parcel",
+    "start": "parcel index.html",
     "build": "parcel build index.html",
     "test": "jest"
   },
