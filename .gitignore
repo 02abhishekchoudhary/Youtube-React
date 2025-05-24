@@ -1,2 +1,4 @@
 /node_modules
 .qodo
+.parcel-cache
+/dist
