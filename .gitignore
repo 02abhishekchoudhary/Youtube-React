@@ -2,3 +2,4 @@
 .qodo
 .parcel-cache
 /dist
+.env

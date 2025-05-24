@@ -1,5 +1,30 @@
+import Button from "./Button";
+
+const list = [
+  "All",
+  "Gaming",
+  "Songs",
+  "Live",
+  "Cricket",
+  "News",
+  "Soccer",
+  "Cooking",
+  "Hockey",
+  "Market",
+  "Javascript",
+  "React",
+  "Node JS",
+];
 const ButtonList = () => {
-  return <div>ButtonList</div>;
+  return (
+    <div className="flex">
+      {/* <Button name="All" />
+      <Button name="Gaming" />*/}
+      {list.map((item, index) => (
+        <Button key={index} name={item} />
+      ))}
+    </div>
+  );
 };
 
 export default ButtonList;
