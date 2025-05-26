@@ -11,16 +11,19 @@ import { useEffect, useState } from "react";
 
 const Head = () => {
   const [searchQuery, setSearchQuery] = useState("");
+  const [suggestions, setSuggestions] = useState([]);
+  const [showSuggestions, setShowSuggestions] = useState(false);
 
   const getSearchSuggestions = async () => {
     const data = await fetch(YOUTUBE_SEARCH_API + searchQuery);
     const json = await data.json();
-    console.log(json[1]);
+    // console.log(json[1]);
+    setSuggestions(json[1]);
   };
 
   useEffect(() => {
     // API call
-    console.log(searchQuery);
+    console.log("API call - " + searchQuery);
     // make an api call after every key press
     // but if the diff between 2 API call is <200ms
     // decline the API call
@@ -48,15 +51,36 @@ const Head = () => {
         </a>
       </div>
       <div className="col-span-10 px-32">
-        <input
-          type="text"
-          className="w-1/2 border border-gray-400 p-2 rounded-l-full"
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-        />
-        <button className="border border-gray-400 py-2 px-5 bg-gray-400 rounded-r-full">
-          Search
-        </button>
+        <div className="relative w-full">
+          <div>
+            <input
+              type="text"
+              className="px-5 w-1/2 border border-gray-400 p-2 rounded-l-full"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onFocus={() => setShowSuggestions(true)}
+              onBlur={() => setShowSuggestions(false)}
+              placeholder="Search"
+            />
+            <button className="border border-gray-400 py-2 px-5 bg-gray-400 rounded-r-full">
+              Search
+            </button>
+          </div>
+          {showSuggestions && suggestions.length > 0 && (
+            <div className="absolute top-full left-0 bg-white py-2 px-2 w-[37rem] shaadow-lg rounded-lg border border-gray-400 z-50">
+              <ul>
+                {suggestions.map((suggestion) => (
+                  <li
+                    key={suggestion}
+                    className="py-2 px-3 shadow-sm hover:bg-gray-100"
+                  >
+                    🔍 {suggestion}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
       </div>
       <div className="col-span-1">
         <img src={USER_ICON} alt="user icon" className="h-10" />
