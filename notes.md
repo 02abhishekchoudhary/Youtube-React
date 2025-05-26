@@ -43,3 +43,17 @@ Debouncing with 200ms
 - setTimeout(200) => make an API call after 200ms
   \*\*
   /
+
+# Cache:
+
+time complexity to search in array = 0(n)
+time complexity to search in Object = 0(1)
+[i, ip, iph, ipho, iphon, iphone]
+{
+i:
+ip:
+iph:
+ipho:
+iphon:
+iphone:
+}
