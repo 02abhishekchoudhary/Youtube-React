@@ -29,7 +29,7 @@ const Head = () => {
 
   useEffect(() => {
     // API call
-    console.log("API call - " + searchQuery);
+    // console.log("API call - " + searchQuery);
     // make an api call after every key press
     // but if the diff between 2 API call is <200ms
     // decline the API call
