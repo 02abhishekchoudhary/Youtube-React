@@ -14,6 +14,10 @@ const list = [
   "Javascript",
   "React",
   "Node JS",
+  "Mongo DB",
+  "Python",
+  "Java",
+  "C++",
 ];
 const ButtonList = () => {
   return (
