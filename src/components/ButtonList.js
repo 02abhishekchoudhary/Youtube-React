@@ -13,8 +13,6 @@ const list = [
   "Market",
   "Javascript",
   "React",
-  "Node JS",
-  "Mongo DB",
   "Python",
   "Java",
   "C++",
