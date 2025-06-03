@@ -1,11 +1,11 @@
 {
+  "homepage": "https://github.com/02abhishekchoudhary/Youtube-React",
   "name": "youtube",
   "version": "1.0.0",
   "description": "Youtube project in React JS",
   "keywords": [
     "Youtube"
   ],
-  "homepage": "https://github.com/02abhishekchoudhary/Youtube-React#readme",
   "bugs": {
     "url": "https://github.com/02abhishekchoudhary/Youtube-React/issues"
   },
@@ -19,9 +19,12 @@
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
-    "test": "jest"
+    "test": "jest",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "parcel": "^2.15.1",
     "postcss": "^8.5.3",
     "tailwindcss": "^3.4.17"
