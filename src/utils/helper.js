@@ -176,8 +176,6 @@ var nameList = [
 ];
 
 export function generateRandomName() {
-  // const randomIndex = Math.floor(Math.random() * nameList.length);
-  // return nameList[randomIndex];
   return nameList[Math.floor(Math.random() * nameList.length)];
 }
 
