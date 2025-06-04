@@ -1,5 +1,5 @@
 {
-  "homepage": "https://02abhishekchoudhary.github.io/Youtube-React/",
+  "homepage": "https://02abhishekchoudhary.github.io/Youtube-React",
   "name": "youtube",
   "version": "1.0.0",
   "description": "Youtube project in React JS",
@@ -18,14 +18,10 @@
   "type": "commonjs",
   "scripts": {
     "start": "parcel index.html",
-    "build": "cross-env TEMP=D:\\temp TMP=D:\\temp parcel build index.html",
-    "test": "jest",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "build": "parcel build index.html",
+    "test": "jest"
   },
   "devDependencies": {
-    "cross-env": "^7.0.3",
-    "gh-pages": "^6.3.0",
     "parcel": "^2.15.1",
     "postcss": "^8.5.3",
     "tailwindcss": "^3.4.17"
